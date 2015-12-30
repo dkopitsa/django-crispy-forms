@@ -131,7 +131,7 @@ def render_field(
         if field_instance is None:
             html = ''
         else:
-            bound_field = BoundField(form, field_instance, field)
+            bound_field = form[field]
 
             if template is None:
                 if form.crispy_field_template is None:
